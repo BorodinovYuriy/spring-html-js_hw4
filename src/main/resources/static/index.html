@@ -12,7 +12,9 @@
     <script src="index.js"></script>
 
 </head>
+
 <body>
+
 <!--корневой div управляется indexController-->
 <div class="container" ng-controller="indexController">
     <h1>Market</h1>
@@ -20,6 +22,7 @@
     <!--script language="JavaScript">
     alert("Добро пожаловать!");
 </script>-->
+
     <!--таблица-->
     <table class ="table table-hover" cellpadding="0" cellspacing="0">
     <!--заголовки -->
@@ -42,8 +45,8 @@
         </tr>
         </tbody>
     </table>
-        <h2>Добавить новый продукт</h2>
 
+        <h2>Добавить новый продукт</h2>
     <form ng-submit="submitCreateNewProduct()">
 
         <label>
@@ -56,24 +59,7 @@
             <input type="number" name="cost" ng-model="newProduct.cost" required>
         </label>
             <button class="btn btn-success" type="submit" >Сохранить товар</button>
-
     </form>
-
 </div>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
