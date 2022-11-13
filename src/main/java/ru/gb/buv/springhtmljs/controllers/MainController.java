@@ -1,20 +1,17 @@
 package ru.gb.buv.springhtmljs.controllers;
 
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.*;
 import ru.gb.buv.springhtmljs.data.Product;
 import ru.gb.buv.springhtmljs.services.ProductService;
-
 import java.util.List;
 
 @RestController
 public class MainController {
     private ProductService productService;
-
     public MainController(ProductService productService) {
         this.productService = productService;
     }
-
     @GetMapping("/products")
     public List<Product> getListAllProducts(){
         return productService.getAllProducts();
@@ -28,5 +25,4 @@ public class MainController {
     public void addNewProduct(@RequestBody Product p){
         productService.addNewProduct(p.getTitle(),p.getCost());
     }
-
 }
